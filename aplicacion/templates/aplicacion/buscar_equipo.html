@@ -1,0 +1,16 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Buscar Equipo
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h2>Buscar Equipo</h2>
+    <form action="/buscar_de_equipo" method="get">
+        {% csrf_token %}
+        <p>Nombre de Equipo: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}
